@@ -56,6 +56,7 @@ public class GUI extends Application {
     primaryStage.show();  
     
     
+    
     //Scene for when the Read button is clicked
    
     //Border Pane for the page that opens when the read button is clicked
@@ -69,22 +70,52 @@ public class GUI extends Application {
       vbox.getChildren().add(new Label(list.get(i)));
     }
     
-    //Button to return from the read data page
-    Button back = new Button("Back");
+    //Button to return from the read page
+    Button readBack = new Button("Back");
+    
     
     //setting the second bp
     bp2.setTop(new Label("Read Data"));
     bp2.setCenter(vbox);
-    bp2.setBottom(back);
+    bp2.setBottom(readBack);
     
     //setting the read scene to bp2
     Scene readScene = new Scene(bp2, 800, 800);
+    
+    
+    // Scene for Generate Report
+    BorderPane bpGenerate = new BorderPane();
+    
+    bpGenerate.setTop(new Label("Select the type of report you would like to generate"));
+    
+    //Buttons for the generate Report Page
+    Button farm = new Button("Farm Report");
+    Button annual = new Button("Annual Report");
+    Button monthly = new Button("Monthly Report");
+    Button dateRange = new Button("Date Range Report");
+    
+    //Button to return from the read page
+    Button generateBack = new Button("Back");
+    
+    //Hbox with all the buttons
+    HBox hboxGenerate = new HBox(100);
+    hboxGenerate.getChildren().addAll(farm, annual, monthly, dateRange);
+    
+    bpGenerate.setCenter(hboxGenerate);
+    bpGenerate.setBottom(generateBack);
+    
+    //setting the read scene to bpGenerate
+    Scene generateScene = new Scene(bpGenerate, 800, 800);
     
     //setting action for read button
     read.setOnAction(e -> primaryStage.setScene(readScene));
     
     //setting action for back button
-    back.setOnAction(e -> primaryStage.setScene(mainScene));
+    readBack.setOnAction(e -> primaryStage.setScene(mainScene));
+    generateBack.setOnAction(e -> primaryStage.setScene(mainScene));
+    
+    //setting action for generate button
+    generate.setOnAction(e -> primaryStage.setScene(generateScene));
     
   }
   
