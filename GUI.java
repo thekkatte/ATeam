@@ -12,7 +12,9 @@ import javafx.stage.Stage;
 //need to create all the pop-ups
 //need to make use of input data
 //need to be able to call from Main class
-
+//need to add functions to buttons in generate Report
+//need to add function to the add button
+//need to create the report displaying page and the data displaying page
 
 public class GUI extends Application {
   
