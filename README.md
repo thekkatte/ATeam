@@ -1,3 +1,5 @@
+Add required info
+
 Course: cs400
 Semester: Spring 2019- 2020
 Project name: Milk Weights
