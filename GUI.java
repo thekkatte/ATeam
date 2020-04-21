@@ -9,6 +9,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+//need to create all the pop-ups
+//need to make use of input data
+//need to be able to call from Main class
+
+
 public class GUI extends Application {
   
   //Temporary List of data
@@ -37,7 +42,7 @@ public class GUI extends Application {
 
     
     //setting the text at the top of the layout
-    bp1.setTop(new Label("What would you like to do?"));
+    bp1.setTop(new Label("\nWhat would you like to do?\n "));
     
     
     //HBox to equally space the buttons from each other
@@ -75,7 +80,7 @@ public class GUI extends Application {
     
     
     //setting the second bp
-    bp2.setTop(new Label("Read Data"));
+    bp2.setTop(new Label("Read Data\n\n Select the file your would like to read\n "));
     bp2.setCenter(vbox);
     bp2.setBottom(readBack);
     
@@ -86,7 +91,7 @@ public class GUI extends Application {
     // Scene for Generate Report
     BorderPane bpGenerate = new BorderPane();
     
-    bpGenerate.setTop(new Label("Select the type of report you would like to generate"));
+    bpGenerate.setTop(new Label("Generate Report\n\nSelect the type of report you would like to generate\n "));
     
     //Buttons for the generate Report Page
     Button farm = new Button("Farm Report");
